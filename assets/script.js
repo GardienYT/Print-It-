@@ -29,7 +29,7 @@ const dotsContainer = document.querySelector(".dots");
 
 // Boucle pour les dots
 slides.forEach((_, index) => {
-	const dot = document.createElement("div"); 						// Crée une <di> pour le point
+	const dot = document.createElement("div"); 						// Crée une <div> pour le point
 	dot.classList.add("dot"); 										// Ajoute la classe "dot"
 	if (index === currentIndex) dot.classList.add("dot_selected"); 	// Vérif la dot
 	dotsContainer.appendChild(dot); 								// Puis l'ajoute
