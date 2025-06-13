@@ -1,1 +1,2 @@
-# Print-It WebSite v.1
+# Print-It
+Premiers pas sur le langage JavaScript
