@@ -29,24 +29,24 @@ const dotsContainer = document.querySelector(".dots");
 
 // Boucle pour les dots
 slides.forEach((_, index) => {
-	const dot = document.createElement("div");
-	dot.classList.add("dot");
-	if (index === currentIndex) dot.classList.add("dot_selected");
-	dotsContainer.appendChild(dot);
+	const dot = document.createElement("div"); 						// Crée une <di> pour le point
+	dot.classList.add("dot"); 										// Ajoute la classe "dot"
+	if (index === currentIndex) dot.classList.add("dot_selected"); 	// Vérif la dot
+	dotsContainer.appendChild(dot); 								// Puis l'ajoute
 });
 
 // Fonction pour mettre à jour les images, textes et dots
 const updateBanner = () => {
 
 	// Mise à jour des ima
-	const slide = slides[currentIndex]; 						// Récup l'images actuelles
-	bannerImg.src = `./assets/images/slideshow/${slide.image}`; // Change l'image actuelle
-	tagLine.innerHTML = slide.tagLine; 							// Change aussi le texte affiché
+	const slide = slides[currentIndex]; 							// Récup l'images actuelles
+	bannerImg.src = `./assets/images/slideshow/${slide.image}`;	 	// Change l'image actuelle
+	tagLine.innerHTML = slide.tagLine; 								// Change aussi le texte affiché
 
 	// Mise à jour des dots
-	const dots = document.querySelectorAll(".dot");				// Récup les dots
-	dots.forEach(dot => dot.classList.remove("dot_selected")); 	// Supprime la selection aux dots
-	dots[currentIndex].classList.add("dot_selected");			// Puis on selectione le bon point
+	const dots = document.querySelectorAll(".dot");					// Récup les dots
+	dots.forEach(dot => dot.classList.remove("dot_selected")); 		// Supprime la selection aux dots
+	dots[currentIndex].classList.add("dot_selected");				// Puis on selectione le bon point
 };
 
 // Clque sur la flèche Gauche
